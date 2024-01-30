@@ -43,6 +43,7 @@
                     echo "<td>{$value['Description']}</td>";
                     echo "<td>{$value['CategoryId']}</td>";
                     echo "<td>{$value['CategoryName']}</td>";
+                    echo "<td><button><a href ='edit.php?id={$value['productId']}'>Edit</a></button></td>";
                 echo "</tr>";
             }
             ?>

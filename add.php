@@ -96,7 +96,7 @@
             $sql = "INSERT INTO toyproduct ( ProductName, Image, ProductPrice, Description, CategoryId) VALUES ( '$ProductName','$image', '$ProductPrice', '$Description', '$CategoryId')";
 
             $conn->exec($sql);
-            // header("Location: index.php");
+            header("Location: index.php");
         }
     }
     ?>
