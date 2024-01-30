@@ -23,22 +23,25 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Img</th>
                 <th>Price</th>
                 <th>Desc</th>
                 <th>Category Id</th>
                 <th>Category name</th>
             </tr>
+            <img src="" alt="">
         </thead>
         <tbody>
             <?php
             foreach ($products as $value) {
                 echo "<tr>";
-                    echo "<td>$value[0]</td>";
-                    echo "<td>$value[1]</td>";
-                    echo "<td>$value[2]</td>";
-                    echo "<td>$value[3]</td>";
-                    echo "<td>$value[4]</td>";
-                    echo "<td>$value[5]</td>";
+                    echo "<td>{$value['productId']}</td>";
+                    echo "<td>{$value['ProductName']}</td>";
+                    echo "<td><img width='200px' src='./img/{$value['Image']}'></td>";
+                    echo "<td>{$value['ProductPrice']}</td>";
+                    echo "<td>{$value['Description']}</td>";
+                    echo "<td>{$value['CategoryId']}</td>";
+                    echo "<td>{$value['CategoryName']}</td>";
                 echo "</tr>";
             }
             ?>
