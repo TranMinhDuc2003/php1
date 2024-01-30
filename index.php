@@ -16,6 +16,7 @@
         $result = $conn->query($sql);
         $products = $result->fetchAll();
         // print_r($products);
+        // aaffafafaaga
     ?>
 
     <table border="1">
