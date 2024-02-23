@@ -12,6 +12,13 @@
     include "pdo.php";
     ?>
     <?php
+   
+    ?>
+    <?php
+     session_start();
+     if(!isset($_SESSION['Username'])){
+         header("Location: login.php");
+     }
         $sql = "SELECT toyproduct.*, category.CategoryName FROM toyproduct JOIN category ON  toyproduct.CategoryId = category.CategoryId ";
         $result = $conn->query($sql);
         $products = $result->fetchAll();
@@ -50,6 +57,7 @@
         </tbody>
 
     </table>
+<a href="logout.php">logout</a>
 </body>
 
 </html>
